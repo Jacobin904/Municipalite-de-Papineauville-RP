@@ -117,7 +117,7 @@
         .section-header h2::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:100px;height:4px;background:var(--grad-gold);border-radius:2px;animation:expandW 2s ease infinite}
         @keyframes expandW{0%,100%{width:100px}50%{width:150px}}
         .section-header p{color:var(--taupe);max-width:650px;margin:0 auto;font-size:1.2rem;line-height:1.9}
-        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
         .feature-card{background:rgba(30,40,58,.5);border-radius:28px;padding:40px;border:2px solid var(--border);backdrop-filter:blur(15px);transition:border-color .5s,box-shadow .5s,transform .5s;position:relative;overflow:hidden;transform-style:preserve-3d}
         .feature-card .spotlight{position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(201,169,97,.12),transparent 42%);opacity:0;transition:opacity .4s;pointer-events:none}
         .feature-card:hover .spotlight{opacity:1}
@@ -217,6 +217,9 @@
         .stagger.active>*:nth-child(4){transition-delay:.26s}
         .stagger.active>*:nth-child(5){transition-delay:.33s}
         .stagger.active>*:nth-child(6){transition-delay:.40s}
+        .stagger.active>*:nth-child(7){transition-delay:.47s}
+        .stagger.active>*:nth-child(8){transition-delay:.54s}
+        .stagger.active>*:nth-child(9){transition-delay:.61s}
         @media(prefers-reduced-motion:reduce){
             *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
             html{scroll-behavior:auto}
@@ -282,6 +285,7 @@
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-briefcase"></i></div><h3>Création d'Entreprise</h3><p>Offert à tous! Lance ta propre compagnie, développe ton business et contribue à l'économie de Papineauville.</p></div>
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-calendar-check"></i></div><h3>Sessions Régulières</h3><p>Des sessions de jeu organisées régulièrement pour animer le serveur. Vote pour lancer une session et rejoins l'action!</p></div>
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-car"></i></div><h3>Véhicules Personnalisés</h3><p>Liveries québécoises authentiques pour tous les services d'urgence et véhicules civils. Un design soigné pour une immersion totale.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-users-gear"></i></div><h3>Staff Actif & Modération</h3><p>Une équipe de modération présente et à l'écoute pour assurer un environnement respectueux et sécurisé. Système de tickets pour toute demande ou signalement.</p></div>
             </div>
         </div>
     </section>
@@ -354,7 +358,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Comment Devenir Staff? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Les candidatures staff ouvrent régulièrement. Surveille le salon #📣・annonces sur Discord et ouvre un ticket quand les candidatures sont ouvertes. Nous recherchons des personnes actives, matures et passionnées.</div>
+                    <div class="faq-answer">Les candidatures staff ouvrent régulièrement. Surveille le salon #・annonces sur Discord et ouvre un ticket quand les candidatures sont ouvertes. Nous recherchons des personnes actives, matures et passionnées.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Comment Participer aux Sessions? <i class="fas fa-chevron-down"></i></div>
