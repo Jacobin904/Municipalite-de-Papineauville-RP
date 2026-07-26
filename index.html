@@ -117,7 +117,7 @@
         .section-header h2::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:100px;height:4px;background:var(--grad-gold);border-radius:2px;animation:expandW 2s ease infinite}
         @keyframes expandW{0%,100%{width:100px}50%{width:150px}}
         .section-header p{color:var(--taupe);max-width:650px;margin:0 auto;font-size:1.2rem;line-height:1.9}
-        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+        .features-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:30px}
         .feature-card{background:rgba(30,40,58,.5);border-radius:28px;padding:40px;border:2px solid var(--border);backdrop-filter:blur(15px);transition:border-color .5s,box-shadow .5s,transform .5s;position:relative;overflow:hidden;transform-style:preserve-3d}
         .feature-card .spotlight{position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(201,169,97,.12),transparent 42%);opacity:0;transition:opacity .4s;pointer-events:none}
         .feature-card:hover .spotlight{opacity:1}
@@ -200,6 +200,7 @@
         }
         @media(max-width:600px){
             .team-grid{grid-template-columns:1fr}
+            .features-grid{grid-template-columns:repeat(1, 1fr)}
         }
         .reveal{opacity:0;transform:translateY(50px);transition:all .8s cubic-bezier(.4,0,.2,1)}
         .reveal.active{opacity:1;transform:translateY(0)}
@@ -217,9 +218,6 @@
         .stagger.active>*:nth-child(4){transition-delay:.26s}
         .stagger.active>*:nth-child(5){transition-delay:.33s}
         .stagger.active>*:nth-child(6){transition-delay:.40s}
-        .stagger.active>*:nth-child(7){transition-delay:.47s}
-        .stagger.active>*:nth-child(8){transition-delay:.54s}
-        .stagger.active>*:nth-child(9){transition-delay:.61s}
         @media(prefers-reduced-motion:reduce){
             *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
             html{scroll-behavior:auto}
