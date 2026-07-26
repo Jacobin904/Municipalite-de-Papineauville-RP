@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Municipalité de Papineauville RP">
     <meta property="og:title" content="Municipalité de Papineauville RP — Notre Ville, Votre Histoire">
-    <meta property="og:description" content="Serveur RP Emergency Response: Liberty County inspiré du Québec. Sûreté du Québec, Urgence Santé, Service Incendie et plus encore.">
+    <meta property="og:description" content="Serveur RP Emergency Response: Liberty County inspiré du Québec. Sûreté du Québec, Police Militaire, Urgence Santé, Service Incendie et plus encore.">
     <meta property="og:url" content="https://papineauville-rp.github.io/">
     <meta property="og:locale" content="fr_CA">
     <meta property="og:image" content="https://cdn.discordapp.com/icons/1513730463431262228/0f5aa3de0f1076828ddf0ce3aac99585.webp?size=1024">
@@ -117,17 +117,17 @@
         .section-header h2::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:100px;height:4px;background:var(--grad-gold);border-radius:2px;animation:expandW 2s ease infinite}
         @keyframes expandW{0%,100%{width:100px}50%{width:150px}}
         .section-header p{color:var(--taupe);max-width:650px;margin:0 auto;font-size:1.2rem;line-height:1.9}
-        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:35px}
-        .feature-card{background:rgba(30,40,58,.5);border-radius:28px;padding:50px;border:2px solid var(--border);backdrop-filter:blur(15px);transition:border-color .5s,box-shadow .5s,transform .5s;position:relative;overflow:hidden;transform-style:preserve-3d}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+        .feature-card{background:rgba(30,40,58,.5);border-radius:28px;padding:40px;border:2px solid var(--border);backdrop-filter:blur(15px);transition:border-color .5s,box-shadow .5s,transform .5s;position:relative;overflow:hidden;transform-style:preserve-3d}
         .feature-card .spotlight{position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(201,169,97,.12),transparent 42%);opacity:0;transition:opacity .4s;pointer-events:none}
         .feature-card:hover .spotlight{opacity:1}
         .feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-gold);transform:scaleX(0);transform-origin:left;transition:transform .5s}
         .feature-card:hover{border-color:var(--gold);box-shadow:0 40px 100px rgba(0,0,0,.6);transform:translateY(-5px)}
         .feature-card:hover::before{transform:scaleX(1)}
-        .feature-icon{width:80px;height:80px;background:var(--grad-gold);border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:var(--nuit-1);margin-bottom:30px;border:2px solid var(--gold);transition:all .5s;box-shadow:0 10px 30px rgba(201,169,97,.4);position:relative;z-index:1}
+        .feature-icon{width:75px;height:75px;background:var(--grad-gold);border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--nuit-1);margin-bottom:25px;border:2px solid var(--gold);transition:all .5s;box-shadow:0 10px 30px rgba(201,169,97,.4);position:relative;z-index:1}
         .feature-card:hover .feature-icon{transform:scale(1.15) rotate(10deg);background:var(--cream);color:var(--primary)}
-        .feature-card h3{font-size:1.8rem;margin-bottom:18px;color:var(--cream);font-weight:800;position:relative;z-index:1}
-        .feature-card p{color:var(--taupe);line-height:1.9;font-size:1.05rem;position:relative;z-index:1}
+        .feature-card h3{font-size:1.6rem;margin-bottom:15px;color:var(--cream);font-weight:800;position:relative;z-index:1}
+        .feature-card p{color:var(--taupe);line-height:1.8;font-size:1rem;position:relative;z-index:1}
         .rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:30px}
         .rule-card{background:rgba(30,40,58,.5);padding:40px;border-radius:24px;border-left:6px solid var(--gold);border-top:2px solid var(--border);border-right:2px solid var(--border);border-bottom:2px solid var(--border);backdrop-filter:blur(10px);transition:all .5s;position:relative;overflow:hidden}
         .rule-card .rule-num{position:absolute;top:15px;right:25px;font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:rgba(201,169,97,.08);line-height:1;transition:all .5s}
@@ -259,25 +259,27 @@
             <div class="hero-badge"><i class="fas fa-maple-leaf"></i> Notre Ville, Votre Histoire</div>
             <h2 id="heroTitle" data-text="PAPINEAUVILLE RP"></h2>
             <p class="hero-subtitle" id="heroSub"></p>
-            <p class="hero-description">Serveur Emergency Response: Liberty County basé au Québec. Rejoins une communauté active et immersive 100% francophone avec la Sûreté du Québec, Urgence Santé, Service Incendie et bien plus encore.</p>
+            <p class="hero-description">Serveur Emergency Response: Liberty County basé au Québec. Rejoins une communauté active et immersive 100% francophone avec la Sûreté du Québec, Police Militaire, Urgence Santé, Service Incendie et bien plus encore.</p>
             <div class="btn-group">
-                <a href="https://discord.gg/pVfqrbTeC" class="btn" target="_blank"><i class="fab fa-discord"></i> Rejoindre le serveur</a>
+                <a href="https://discord.gg/pVfqrbTeC" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Rejoindre le serveur</a>
                 <a href="#apropos" class="btn btn-secondary">Découvrir plus</a>
             </div>
         </div>
     </section>
     <div class="marquee"><div class="marquee-track">
-        <div class="marquee-item">RP QUÉBÉCOIS <i class="fas fa-star sep"></i> COMMUNAUTÉ ACTIVE <i class="fas fa-shield-halved sep"></i> SQ & EMS <i class="fas fa-star sep"></i> SESSIONS RÉGULIÈRES <i class="fas fa-shield-halved sep"></i> 100% FRANCOPHONE <i class="fas fa-star sep"></i> STAFF ACTIF <i class="fas fa-shield-halved sep"></i></div>
-        <div class="marquee-item">RP QUÉBÉCOIS <i class="fas fa-star sep"></i> COMMUNAUTÉ ACTIVE <i class="fas fa-shield-halved sep"></i> SQ & EMS <i class="fas fa-star sep"></i> SESSIONS RÉGULIÈRES <i class="fas fa-shield-halved sep"></i> 100% FRANCOPHONE <i class="fas fa-star sep"></i> STAFF ACTIF <i class="fas fa-shield-halved sep"></i></div>
+        <div class="marquee-item">RP QUÉBÉCOIS <i class="fas fa-star sep"></i> COMMUNAUTÉ ACTIVE <i class="fas fa-shield-halved sep"></i> SQ & POLICE MILITAIRE <i class="fas fa-star sep"></i> SESSIONS RÉGULIÈRES <i class="fas fa-shield-halved sep"></i> 100% FRANCOPHONE <i class="fas fa-star sep"></i> STAFF ACTIF <i class="fas fa-shield-halved sep"></i></div>
+        <div class="marquee-item">RP QUÉBÉCOIS <i class="fas fa-star sep"></i> COMMUNAUTÉ ACTIVE <i class="fas fa-shield-halved sep"></i> SQ & POLICE MILITAIRE <i class="fas fa-star sep"></i> SESSIONS RÉGULIÈRES <i class="fas fa-shield-halved sep"></i> 100% FRANCOPHONE <i class="fas fa-star sep"></i> STAFF ACTIF <i class="fas fa-shield-halved sep"></i></div>
     </div></div>
     <section id="apropos">
         <div class="container">
             <div class="section-header reveal"><h2>Ce que tu vas trouver</h2><p>Un environnement réaliste, immersif et accueillant au cœur de la Petite-Nation québécoise.</p></div>
             <div class="features-grid stagger">
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-shield-halved"></i></div><h3>Sûreté du Québec</h3><p>Rejoins les rangs de la SQ et fais respecter la loi dans la municipalité de Papineauville. Formations, patrouilles et interventions réalistes t'attendent.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-user-shield"></i></div><h3>Police Militaire</h3><p>Unité d'élite pour le maintien de l'ordre et les opérations spéciales. Rejoins une équipe structurée et professionnelle.</p></div>
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-truck-medical"></i></div><h3>Urgence Santé</h3><p>Devient ambulancier et sauve des vies. Le service paramédical recrute activement des personnes motivées pour rejoindre l'équipe.</p></div>
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-fire-extinguisher"></i></div><h3>Service Incendie</h3><p>Combat les flammes et porte secours à la population. Un département en développement avec de belles opportunités.</p></div>
-                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-briefcase"></i></div><h3>Jobs Civils</h3><p>Agriculteur, banquier, chauffeur de taxi, employé de station-service et bien d'autres emplois pour vivre ta vie de citoyen.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-skull"></i></div><h3>Gangs & Illégal</h3><p>Côté illégal actif avec des gangs organisés. Crée ton empire criminel ou rejoins une organisation existante.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-briefcase"></i></div><h3>Création d'Entreprise</h3><p>Offert à tous! Lance ta propre compagnie, développe ton business et contribue à l'économie de Papineauville.</p></div>
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-calendar-check"></i></div><h3>Sessions Régulières</h3><p>Des sessions de jeu organisées régulièrement pour animer le serveur. Vote pour lancer une session et rejoins l'action!</p></div>
                 <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-car"></i></div><h3>Véhicules Personnalisés</h3><p>Liveries québécoises authentiques pour tous les services d'urgence et véhicules civils. Un design soigné pour une immersion totale.</p></div>
             </div>
@@ -348,7 +350,7 @@
             <div class="faq-container stagger">
                 <div class="faq-item">
                     <div class="faq-question">Comment Rejoindre le Serveur de Jeu? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Sur Roblox, recherche "Emergency Response: Liberty County" et utilise le code "PAPINEAU" ou "LavalQcFr" dans les paramètres du serveur pour nous rejoindre.</div>
+                    <div class="faq-answer">Sur Roblox, recherche "Emergency Response: Liberty County" et utilise le code "PAPINEAU" dans les paramètres du serveur pour nous rejoindre.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Comment Devenir Staff? <i class="fas fa-chevron-down"></i></div>
@@ -360,11 +362,11 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Quels Départements Sont Disponibles? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Nous avons la Sûreté du Québec (SQ), Urgence Santé (EMS), Service Incendie, Gouvernement, et divers jobs civils. Certains départements sont sur liste blanche et nécessitent une candidature.</div>
+                    <div class="faq-answer">Nous avons la Sûreté du Québec (SQ), Police Militaire, Urgence Santé (EMS), Service Incendie, Gouvernement, gangs, et divers jobs civils. Certains départements sont sur liste blanche et nécessitent une candidature.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">Comment Obtenir une Livery Personnalisée? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-answer">Rejoins notre serveur secondaire "Livery Municipalité de Papineauville RP" (https://discord.gg/K6RJwXDA2h) où tu peux consulter et obtenir des liveries personnalisées pour les véhicules du serveur.</div>
+                    <div class="faq-question">Comment Créer une Entreprise? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">La création d'entreprise est offerte à tous! Ouvre un ticket dans la section appropriée sur Discord et explique ton projet. Notre équipe t'aidera à mettre en place ta compagnie.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Le Serveur est-il Actif? <i class="fas fa-chevron-down"></i></div>
@@ -376,8 +378,8 @@
     <section class="cta" id="rejoindre">
         <div class="container"><div class="reveal-scale">
             <h2>Rejoins l'Aventure Papineauville!</h2>
-            <p>Notre ville, votre histoire. Devient policier, ambulancier, pompier ou simple citoyen. L'expérience RP québécoise t'attend sur Emergency Response: Liberty County.</p>
-            <a href="https://discord.gg/pVfqrbTeC" class="btn btn-pulse" target="_blank" style="background:var(--grad-gold);color:var(--nuit-1);border:2px solid var(--gold);font-size:1.15rem;padding:20px 50px"><i class="fab fa-discord"></i> Rejoindre Papineauville RP</a>
+            <p>Notre ville, votre histoire. Devient policier, ambulancier, pompier, membre de gang ou simple citoyen. L'expérience RP québécoise t'attend sur Emergency Response: Liberty County.</p>
+            <a href="https://discord.gg/pVfqrbTeC" class="btn btn-pulse" target="_blank" rel="noopener noreferrer" style="background:var(--grad-gold);color:var(--nuit-1);border:2px solid var(--gold);font-size:1.15rem;padding:20px 50px"><i class="fab fa-discord"></i> Rejoindre Papineauville RP</a>
         </div></div>
     </section>
     <footer><div class="container">
@@ -402,9 +404,9 @@
             <div class="footer-col">
                 <h4>Serveurs Secondaires</h4>
                 <ul>
-                    <li><a href="https://discord.gg/MYKht8xBp" target="_blank"><i class="fas fa-building"></i> Compagnies Papineauville</a></li>
-                    <li><a href="https://discord.gg/K6RJwXDA2h" target="_blank"><i class="fas fa-car"></i> Livery Papineauville</a></li>
-                    <li><a href="https://discord.gg/pVfqrbTeC" target="_blank"><i class="fab fa-discord"></i> Discord Principal</a></li>
+                    <li><a href="https://discord.gg/MYKht8xBp" target="_blank" rel="noopener noreferrer"><i class="fas fa-building"></i> Compagnies Papineauville</a></li>
+                    <li><a href="https://discord.gg/K6RJwXDA2h" target="_blank" rel="noopener noreferrer"><i class="fas fa-car"></i> Livery Papineauville</a></li>
+                    <li><a href="https://discord.gg/pVfqrbTeC" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord Principal</a></li>
                 </ul>
             </div>
             <div class="footer-col">
