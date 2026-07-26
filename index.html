@@ -200,7 +200,6 @@
         }
         @media(max-width:600px){
             .team-grid{grid-template-columns:1fr}
-            .features-grid{grid-template-columns:repeat(1, 1fr)}
         }
         .reveal{opacity:0;transform:translateY(50px);transition:all .8s cubic-bezier(.4,0,.2,1)}
         .reveal.active{opacity:1;transform:translateY(0)}
@@ -218,6 +217,9 @@
         .stagger.active>*:nth-child(4){transition-delay:.26s}
         .stagger.active>*:nth-child(5){transition-delay:.33s}
         .stagger.active>*:nth-child(6){transition-delay:.40s}
+        .stagger.active>*:nth-child(7){transition-delay:.47s}
+        .stagger.active>*:nth-child(8){transition-delay:.54s}
+        .stagger.active>*:nth-child(9){transition-delay:.61s}
         @media(prefers-reduced-motion:reduce){
             *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
             html{scroll-behavior:auto}
