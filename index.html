@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalité de Papineauville RP | Serveur ER:LC Québécois</title>
+    <link rel="icon" type="image/webp" href="https://cdn.phototourl.com/free/2026-07-22-2c2a13dc-03fd-4089-ba37-615763d344a3.png">
+    <link rel="apple-touch-icon" href="https://cdn.phototourl.com/free/2026-07-22-2c2a13dc-03fd-4089-ba37-615763d344a3.png">
+    <meta name="description" content="Municipalité de Papineauville RP est un serveur de roleplay Emergency Response: Liberty County basé au Québec. Rejoins une communauté active et immersive 100% francophone.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Municipalité de Papineauville RP">
+    <meta property="og:title" content="Municipalité de Papineauville RP — Serveur ER:LC Québécois">
+    <meta property="og:description" content="Notre ville, votre histoire. Rejoins le serveur RP Emergency Response: Liberty County inspiré du Québec avec la Sûreté du Québec, Urgence Santé et plus encore.">
+    <meta property="og:url" content="https://papineauville-rp.github.io/">
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:image" content="https://images-ext-1.discordapp.net/external/JgwWRm3STVC9O_y_9LrssW9MpPNw6s0ysJ7H8Bvk6f4/https/cdn.phototourl.com/free/2026-07-22-2c2a13dc-03fd-4089-ba37-615763d344a3.png?format=webp&quality=lossless&width=1872&height=749">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://images-ext-1.discordapp.net/external/JgwWRm3STVC9O_y_9LrssW9MpPNw6s0ysJ7H8Bvk6f4/https/cdn.phototourl.com/free/2026-07-22-2c2a13dc-03fd-4089-ba37-615763d344a3.png?format=webp&quality=lossless&width=1872&height=749">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+        :root {
+            --nuit-0:#05080f;--nuit-1:#0a1024;--nuit-2:#0d1530;--nuit-3:#111a3a;
+            --primary:#1e40af;--primary-dark:#1e3a8a;--primary-light:#3b82f6;--blue-clar:#60a5fa;
+            --blanc:#f2f4fb;--blanc-2:#d6dcef;--gris:#8b95b5;--gris-2:#5d688a;
+            --border:rgba(214,220,239,.10);--border-primary:rgba(30, 64, 175, .35);
+            --grad-argent:linear-gradient(135deg,#fff 0%,#d6dcef 45%,#b8c4e0 100%);
+            --grad-primary:linear-gradient(135deg,#1e40af 0%,#1e3a8a 100%);
+            --grad-primary-light:linear-gradient(135deg,#3b82f6 0%,#1e40af 100%);
+            --danger: #ef4444; --warning: #f59e0b; --success: #22c55e;
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;background:var(--nuit-0);color:var(--blanc-2);line-height:1.7;overflow-x:hidden}
+        :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
+        ::-webkit-scrollbar{width:8px}
+        ::-webkit-scrollbar-track{background:var(--nuit-0)}
+        ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--primary),var(--primary-dark));border-radius:4px}
+        ::-webkit-scrollbar-thumb:hover{background:var(--primary)}
+        .grain{position:fixed;inset:0;z-index:9997;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px 128px}
+        .glow-follow{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(30,64,175,.06) 0%,transparent 70%);pointer-events:none;z-index:-1;transform:translate(-50%,-50%)}
+        .mesh-bg{position:fixed;inset:0;z-index:-2;overflow:hidden}
+        .mesh-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4;animation:blobFloat 20s ease-in-out infinite}
+        .mesh-blob:nth-child(1){width:500px;height:500px;background:rgba(30,64,175,.3);top:-10%;left:-5%}
+        .mesh-blob:nth-child(2){width:400px;height:400px;background:rgba(30,64,175,.25);bottom:10%;right:-5%;animation-delay:-7s}
+        .mesh-blob:nth-child(3){width:350px;height:350px;background:rgba(30,64,175,.08);top:40%;left:50%;animation-delay:-14s}
+        @keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-40px) scale(1.1)}50%{transform:translate(-20px,30px) scale(.95)}75%{transform:translate(40px,20px) scale(1.05)}}
+        .progress-dots{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:999;display:flex;flex-direction:column;gap:12px}
+        .progress-dots .dot{width:10px;height:10px;border-radius:50%;background:rgba(214,220,239,.2);border:1px solid rgba(214,220,239,.15);transition:all .4s;cursor:pointer}
+        .progress-dots .dot.active{background:var(--primary);border-color:var(--primary);box-shadow:0 0 12px rgba(30,64,175,.5);transform:scale(1.4)}
+        .progress-dots .dot:hover{background:var(--blanc);transform:scale(1.3)}
+        @media(max-width:900px){.progress-dots{display:none}}
+        .preloader{position:fixed;inset:0;background:var(--nuit-0);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .8s,visibility .8s}
+        .preloader.hidden{opacity:0;visibility:hidden}
+        .preloader-logo{width:90px;height:90px;border-radius:50%;border:3px solid rgba(214,220,239,.3);animation:pSpin 2s linear infinite,pPulse 1.5s ease-in-out infinite;box-shadow:0 0 40px rgba(30,64,175,.6)}
+        @keyframes pSpin{to{transform:rotate(360deg)}}
+        @keyframes pPulse{0%,100%{box-shadow:0 0 40px rgba(30,64,175,.6)}50%{box-shadow:0 0 70px rgba(30,64,175,.7)}}
+        .preloader-bar{width:220px;height:3px;background:rgba(214,220,239,.1);border-radius:3px;overflow:hidden}
+        .preloader-bar i{display:block;height:100%;width:0%;background:var(--grad-primary);border-radius:3px;transition:width .15s linear}
+        .preloader-percent{font-family:'JetBrains Mono',monospace;font-size:1.4rem;font-weight:700;color:var(--primary);letter-spacing:2px}
+        .preloader-text{font-family:'Playfair Display',serif;font-size:1rem;letter-spacing:4px;background:var(--grad-argent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-transform:uppercase}
+        .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#1e40af,#1e3a8a);z-index:1001;box-shadow:0 0 10px rgba(30,64,175,.4);transition:width .1s linear}
+        #particleCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+        .container{width:100%;max-width:1400px;margin:0 auto;padding:0 40px}
+        header{background:rgba(8,12,26,.94);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--border);color:#fff;padding:20px 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 30px rgba(0,0,0,.6);transition:all .3s}
+        header.scrolled{padding:12px 0;background:rgba(5,8,15,.98)}
+        nav{display:flex;justify-content:space-between;align-items:center}
+        .logo{display:flex;align-items:center;gap:15px;text-decoration:none;color:#fff;transition:all .4s}
+        .logo:hover{transform:scale(1.05)}
+        .logo img{height:50px;border-radius:50%;border:2px solid rgba(214,220,239,.4);box-shadow:0 0 20px rgba(30,64,175,.5)}
+        .logo h1{font-size:1.8rem;font-weight:900;background:var(--grad-argent);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Playfair Display',serif;animation:gradShift 4s ease infinite}
+        @keyframes gradShift{0%,100%{background-position:0% center}50%{background-position:100% center}}
+        .nav-links{display:flex;gap:24px;list-style:none}
+        .nav-links a{color:var(--gris);text-decoration:none;font-weight:600;font-size:.82rem;transition:all .3s;text-transform:uppercase;letter-spacing:.5px;position:relative;padding:5px 0}
+        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--grad-primary);transition:width .3s}
+        .nav-links a:hover,.nav-links a.active{color:var(--blanc)}
+        .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+        .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:5px;cursor:pointer}
+        .hamburger span{width:28px;height:3px;background:var(--blanc);border-radius:3px;transition:all .3s}
+        .hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+        .hamburger.active span:nth-child(2){opacity:0}
+        .hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+        .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:180px 20px 120px;position:relative;overflow:hidden}
+        .hero-content{max-width:1100px;z-index:1;position:relative}
+        .hero-badge{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(30,64,175,.5),rgba(30,64,175,.15));backdrop-filter:blur(15px);padding:15px 35px;border-radius:50px;font-size:.95rem;font-weight:700;margin-bottom:35px;border:1px solid rgba(30,64,175,.35);color:#93c5fd;letter-spacing:2px;text-transform:uppercase;animation:slideDown 1s ease;box-shadow:0 10px 30px rgba(30,64,175,.4)}
+        @keyframes slideDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+        .hero h2{font-size:6rem;margin-bottom:25px;font-weight:900;font-family:'Playfair Display',serif;line-height:1.2;display:flex;flex-wrap:wrap;justify-content:center;gap:0 .28em}
+        .hero h2 .word{display:inline-flex;overflow:hidden;padding:.08em 0}
+        .hero h2 .char{display:inline-block;background:var(--grad-argent);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transform:translateY(115%);animation:charUp .8s cubic-bezier(.5,0,.1,1) forwards,gradShift 4s ease infinite}
+        @keyframes charUp{to{transform:translateY(0)}}
+        .hero h2.done{position:relative}
+        .hero h2.done::after{content:attr(data-text);position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.85) 50%,transparent 65%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shine 1.1s ease .2s 1;pointer-events:none;mix-blend-mode:overlay;opacity:0}
+        @keyframes shine{0%{background-position:150% 0;opacity:1}100%{background-position:-50% 0;opacity:0}}
+        .hero-subtitle{font-size:1.8rem;margin-bottom:35px;font-weight:600;color:#93c5fd;letter-spacing:5px;text-transform:uppercase;font-family:'Cormorant Garamond',serif;min-height:1.5em}
+        .hero-subtitle .tw-cursor{display:inline-block;width:3px;height:1.4em;background:var(--primary);margin-left:4px;animation:blink .8s step-end infinite;vertical-align:text-bottom}
+        @keyframes blink{50%{opacity:0}}
+        .hero-description{font-size:1.35rem;margin-bottom:50px;line-height:2;max-width:800px;margin-left:auto;margin-right:auto;color:var(--blanc-2);opacity:0;animation:fadeUp 1s ease 2.5s forwards}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .btn-group{display:flex;gap:25px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease 3s forwards}
+        .btn{display:inline-flex;align-items:center;gap:12px;background:var(--grad-primary);color:#fff;padding:18px 45px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform .3s,box-shadow .3s,border-color .3s,background .3s;border:2px solid rgba(214,220,239,.3);box-shadow:0 15px 40px rgba(30,64,175,.5);text-transform:uppercase;letter-spacing:1px;position:relative;overflow:hidden}
+        .btn:hover{transform:translateY(-3px);box-shadow:0 25px 60px rgba(30,64,175,.4);border-color:var(--primary)}
+        .btn-secondary{background:transparent;border:2px solid rgba(214,220,239,.4);box-shadow:none}
+        .btn-secondary:hover{background:rgba(30,64,175,.1);border-color:var(--primary);box-shadow:0 15px 40px rgba(30,64,175,.2)}
+        .marquee{background:linear-gradient(90deg,var(--nuit-2),var(--primary-dark),var(--nuit-2));padding:25px 0;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:5}
+        .marquee-track{display:flex;gap:60px;white-space:nowrap;animation:marqScroll 25s linear infinite;width:max-content}
+        .marquee-item{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--blanc);display:flex;align-items:center;gap:60px;letter-spacing:3px}
+        .marquee-item .sep{font-size:1.5rem}
+        .marquee-item .sep:nth-of-type(3n+1){color:#93c5fd}
+        .marquee-item .sep:nth-of-type(3n+2){color:var(--blanc)}
+        .marquee-item .sep:nth-of-type(3n+3){color:var(--blue-clar)}
+        @keyframes marqScroll{to{transform:translateX(-50%)}}
+        section{padding:120px 0;position:relative}
+        .section-header{text-align:center;margin-bottom:80px}
+        .section-header h2{font-size:3.5rem;background:var(--grad-argent);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:25px;font-weight:900;font-family:'Playfair Display',serif;display:inline-block;position:relative;animation:gradShift 4s ease infinite}
+        .section-header h2::after{content:'';position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:100px;height:4px;background:var(--grad-primary);border-radius:2px;animation:expandW 2s ease infinite}
+        @keyframes expandW{0%,100%{width:100px}50%{width:150px}}
+        .section-header p{color:var(--gris);max-width:650px;margin:0 auto;font-size:1.2rem;line-height:1.9}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:35px}
+        .feature-card{background:rgba(13,21,48,.6);border-radius:28px;padding:50px;border:1px solid var(--border);backdrop-filter:blur(15px);transition:border-color .5s,box-shadow .5s,transform .5s;position:relative;overflow:hidden;transform-style:preserve-3d}
+        .feature-card .spotlight{position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(30,64,175,.14),transparent 42%);opacity:0;transition:opacity .4s;pointer-events:none}
+        .feature-card:hover .spotlight{opacity:1}
+        .feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-primary);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+        .feature-card:hover{border-color:rgba(30,64,175,.4);box-shadow:0 40px 100px rgba(0,0,0,.5);transform:translateY(-5px)}
+        .feature-card:hover::before{transform:scaleX(1)}
+        .feature-icon{width:80px;height:80px;background:var(--grad-primary);border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:2.2rem;color:var(--blanc);margin-bottom:30px;border:1px solid var(--border-primary);transition:all .5s;box-shadow:0 10px 30px rgba(30,64,175,.4);position:relative;z-index:1}
+        .feature-card:hover .feature-icon{transform:scale(1.15) rotate(10deg);background:var(--grad-primary-light);color:var(--nuit-1)}
+        .feature-card h3{font-size:1.8rem;margin-bottom:18px;color:var(--blanc);font-weight:800;position:relative;z-index:1}
+        .feature-card p{color:var(--gris);line-height:1.9;font-size:1.05rem;position:relative;z-index:1}
+        .rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:30px}
+        .rule-card{background:rgba(13,21,48,.6);padding:40px;border-radius:24px;border-left:6px solid var(--primary);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);transition:all .5s;position:relative;overflow:hidden}
+        .rule-card .rule-num{position:absolute;top:15px;right:25px;font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:rgba(214,220,239,.04);line-height:1;transition:all .5s}
+        .rule-card:hover .rule-num{color:rgba(30,64,175,.12);transform:scale(1.1)}
+        .rule-card:hover{transform:translateX(15px);border-left-color:var(--primary);box-shadow:0 20px 60px rgba(30,64,175,.4)}
+        .rule-card h4{color:var(--blanc);margin-bottom:15px;font-size:1.4rem;display:flex;align-items:center;gap:14px;font-weight:800;position:relative;z-index:1}
+        .rule-card h4 i{color:#93c5fd}
+        .rule-card p{color:var(--gris);font-size:1.05rem;line-height:1.9;position:relative;z-index:1}
+        .team-section{background:linear-gradient(180deg,var(--nuit-1),var(--nuit-0))}
+        .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;max-width:1200px;margin:0 auto}
+        .team-card{background:rgba(13,21,48,.6);border-radius:28px;padding:40px;text-align:center;border:1px solid var(--border);backdrop-filter:blur(15px);transition:all .5s;position:relative;overflow:hidden}
+        .team-card:hover{transform:translateY(-10px);box-shadow:0 30px 80px rgba(30,64,175,.4)}
+        .team-img-wrap{width:150px;height:150px;margin:0 auto 25px;position:relative}
+        .team-img-wrap::after{content:'';position:absolute;inset:-8px;border:2px dashed rgba(30,64,175,.3);border-radius:50%;animation:rotate 15s linear infinite}
+        @keyframes rotate{to{transform:rotate(360deg)}}
+        .team-img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid rgba(214,220,239,.2);transition:all .5s}
+        .team-card:hover .team-img{transform:scale(1.08);border-color:var(--primary)}
+        .team-card h3{font-size:1.8rem;background:var(--grad-argent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;font-weight:800}
+        .team-role{display:inline-block;padding:6px 20px;border-radius:20px;font-size:.9rem;font-weight:700;margin-bottom:20px;background:var(--grad-primary);color:var(--nuit-1)}
+        .team-card p{color:var(--gris);line-height:1.8}
+        .faq-container{max-width:850px;margin:0 auto}
+        .faq-item{background:rgba(13,21,48,.6);border-radius:20px;margin-bottom:25px;border:1px solid var(--border);overflow:hidden;transition:all .5s;backdrop-filter:blur(10px)}
+        .faq-item:hover{border-color:var(--border-primary);box-shadow:0 15px 50px rgba(30,64,175,.3)}
+        .faq-question{padding:35px;display:flex;justify-content:space-between;align-items:center;font-weight:700;color:var(--blanc);transition:all .4s;font-size:1.15rem;cursor:pointer}
+        .faq-question:hover{color:#93c5fd}
+        .faq-question i{transition:transform .5s;color:var(--primary-dark);font-size:1.3rem}
+        .faq-item.active .faq-question i{transform:rotate(180deg);color:var(--primary)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .6s ease,padding .6s ease;padding:0 35px;color:var(--gris);line-height:1.9;font-size:1.05rem}
+        .faq-item.active .faq-answer{max-height:500px;padding:0 35px 35px 35px}
+        .cta{background:radial-gradient(ellipse at center,rgba(30,64,175,.35),transparent 70%);text-align:center;padding:150px 0;position:relative;overflow:hidden}
+        .cta h2{font-size:4rem;margin-bottom:30px;font-weight:900;font-family:'Playfair Display',serif;background:var(--grad-argent);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradShift 4s ease infinite}
+        .cta p{font-size:1.45rem;max-width:800px;margin:0 auto 60px;color:var(--gris);line-height:2}
+        .cta .btn-pulse{animation:ctaPulse 2.5s ease-in-out infinite}
+        @keyframes ctaPulse{0%,100%{box-shadow:0 15px 40px rgba(30,64,175,.4)}50%{box-shadow:0 15px 70px rgba(30,64,175,.75)}}
+        footer{background:linear-gradient(180deg,var(--nuit-0),var(--nuit-1));color:var(--blanc-2);padding:100px 0 50px;border-top:1px solid var(--border)}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:50px;margin-bottom:70px}
+        .footer-col h4{font-size:1.5rem;margin-bottom:35px;color:var(--blanc);font-weight:800;position:relative;padding-bottom:15px}
+        .footer-col h4::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;background:var(--grad-primary);border-radius:2px}
+        .footer-col p{color:var(--gris);line-height:1.9;margin-bottom:30px}
+        .footer-col ul{list-style:none}
+        .footer-col ul li{margin-bottom:18px}
+        .footer-col ul li a{color:var(--gris);text-decoration:none;transition:all .4s;display:flex;align-items:center;gap:12px}
+        .footer-col ul li a:hover{color:#93c5fd;padding-left:10px}
+        .footer-col ul li a i{color:var(--primary-dark)}
+        .social-links{display:flex;gap:18px;margin-top:30px}
+        .social-links a{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .4s;font-size:1.5rem;color:#fff;border:1px solid rgba(255,255,255,0.15)}
+        .social-links a:hover{transform:translateY(-8px) scale(1.15)}
+        .social-links a[title="Discord"]{background:#5865F2}
+        .social-links a[title="Discord"]:hover{box-shadow:0 15px 40px rgba(88,101,242,.5)}
+        .copyright{text-align:center;padding-top:50px;border-top:1px solid var(--border);color:var(--gris-2)}
+        .back-to-top{position:fixed;bottom:30px;right:30px;width:55px;height:55px;background:var(--grad-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--nuit-1);font-size:1.3rem;text-decoration:none;box-shadow:0 10px 30px rgba(30,64,175,.4);z-index:999;opacity:0;visibility:hidden;transform:translateY(20px);transition:all .4s}
+        .back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+        .back-to-top:hover{transform:translateY(-5px) scale(1.1)}
+        .fab-menu,.quicknav,.quicknav-overlay{display:none}
+        @keyframes fabPulse{0%,100%{box-shadow:0 10px 30px rgba(30,64,175,.4)}50%{box-shadow:0 10px 42px rgba(30,64,175,.75)}}
+        @media(max-width:900px){
+            .fab-menu{display:flex;align-items:center;justify-content:center;position:fixed;left:22px;bottom:22px;width:58px;height:58px;border-radius:50%;border:none;background:var(--grad-primary);color:var(--nuit-1);font-size:1.4rem;z-index:1002;animation:fabPulse 2.5s ease-in-out infinite;cursor:pointer}
+            .quicknav-overlay{display:block;position:fixed;inset:0;background:rgba(5,8,15,.6);backdrop-filter:blur(4px);z-index:1003;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+            .quicknav-overlay.open{opacity:1;visibility:visible}
+            .quicknav{display:flex;flex-direction:column;position:fixed;left:0;right:0;bottom:0;z-index:1004;background:linear-gradient(180deg,var(--nuit-2),var(--nuit-1));border:1px solid var(--border);border-bottom:none;border-radius:26px 26px 0 0;padding:18px 0 8px;max-height:82vh;transform:translateY(110%);transition:transform .4s cubic-bezier(.4,0,.2,1);box-shadow:0 -20px 60px rgba(0,0,0,.6)}
+            .quicknav.open{transform:translateY(0)}
+            .quicknav-grab{width:46px;height:5px;border-radius:5px;background:rgba(30,64,175,.3);margin:0 auto 14px}
+            .quicknav-header{display:flex;align-items:center;justify-content:space-between;padding:0 22px 14px}
+            .quicknav-header span{font-family:'Playfair Display',serif;font-size:1.2rem;background:var(--grad-argent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800}
+            .quicknav-close{background:rgba(214,220,239,.1);border:1px solid var(--border);color:var(--blanc);width:38px;height:38px;border-radius:50%;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer}
+            .quicknav-links{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:6px 22px 24px;overflow-y:auto}
+            .quicknav-links a{display:flex;align-items:center;gap:12px;padding:16px;border-radius:14px;background:rgba(5,8,15,.5);border:1px solid var(--border);color:var(--blanc-2);text-decoration:none;font-weight:600;font-size:.95rem;transition:all .25s}
+            .quicknav-links a i{color:#93c5fd;width:20px;text-align:center}
+            .quicknav-links .qn-cta{grid-column:1/-1;background:var(--grad-primary);color:#fff;justify-content:center;border:none}
+            .quicknav-links .qn-cta i{color:#fff}
+        }
+        .reveal{opacity:0;transform:translateY(50px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+        .reveal.active{opacity:1;transform:translateY(0)}
+        .reveal-left{opacity:0;transform:translateX(-60px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+        .reveal-left.active{opacity:1;transform:translateX(0)}
+        .reveal-right{opacity:0;transform:translateX(60px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+        .reveal-right.active{opacity:1;transform:translateX(0)}
+        .reveal-scale{opacity:0;transform:scale(.8);transition:all .8s cubic-bezier(.4,0,.2,1)}
+        .reveal-scale.active{opacity:1;transform:scale(1)}
+        .stagger>*{opacity:0;transform:translateY(40px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+        .stagger.active>*{opacity:1;transform:translateY(0)}
+        .stagger.active>*:nth-child(1){transition-delay:.05s}
+        .stagger.active>*:nth-child(2){transition-delay:.12s}
+        .stagger.active>*:nth-child(3){transition-delay:.19s}
+        .stagger.active>*:nth-child(4){transition-delay:.26s}
+        .stagger.active>*:nth-child(5){transition-delay:.33s}
+        .stagger.active>*:nth-child(6){transition-delay:.40s}
+        @media(prefers-reduced-motion:reduce){
+            *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+            html{scroll-behavior:auto}
+            .hero h2 .char{transform:none}
+            .reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger>*{opacity:1;transform:none}
+        }
+        @media(max-width:900px){.hamburger{display:flex}.nav-links{position:fixed;top:80px;left:0;width:100%;background:rgba(5,8,15,.98);backdrop-filter:blur(20px);flex-direction:column;gap:0;padding:20px 0;transform:translateY(-150%);transition:transform .4s;border-bottom:1px solid var(--border)}.nav-links.open{transform:translateY(0)}.nav-links li{width:100%;text-align:center}.nav-links a{display:block;padding:15px}}
+        @media(max-width:768px){.container{padding:0 20px}.hero h2{font-size:3rem}.section-header h2{font-size:2.5rem}.cta h2{font-size:2.5rem}.btn-group{flex-direction:column;align-items:center}.features-grid,.rules-grid{grid-template-columns:1fr}.marquee-item{font-size:1.4rem;gap:40px}}
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="glow-follow" id="glowFollow"></div>
+    <div class="mesh-bg"><div class="mesh-blob"></div><div class="mesh-blob"></div><div class="mesh-blob"></div></div>
+    <div class="progress-dots" id="progressDots"></div>
+    <div class="preloader" id="preloader">
+        <img src="https://cdn.phototourl.com/free/2026-07-22-2c2a13dc-03fd-4089-ba37-615763d344a3.png" alt="Logo" class="preloader-logo">
+        <div class="preloader-percent" id="preloaderPercent">0%</div>
+        <div class="preloader-bar"><i id="preloaderBarFill"></i></div>
+        <div class="preloader-text">Chargement</div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <canvas id="particleCanvas"></canvas>
+    <header id="header">
+        <div class="container"><nav>
+            <a href="#" class="logo"><img src="https://cdn.phototourl.com/free/2026-07-22-2c2a13dc-03fd-4089-ba37-615763d344a3.png" alt="Logo"><h1>Papineauville RP</h1></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#apropos" class="nav-link">À propos</a></li>
+                <li><a href="#reglements" class="nav-link">Règlements</a></li>
+                <li><a href="#equipe" class="nav-link">Équipe</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#rejoindre" class="nav-link">Rejoindre</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </nav></div>
+    </header>
+    <section class="hero" id="accueil">
+        <div class="hero-content" id="heroContent">
+            <div class="hero-badge"><i class="fas fa-maple-leaf"></i> Notre Ville, Votre Histoire</div>
+            <h2 id="heroTitle" data-text="PAPINEAUVILLE RP"></h2>
+            <p class="hero-subtitle" id="heroSub"></p>
+            <p class="hero-description">Serveur Emergency Response: Liberty County basé au Québec. Rejoins une communauté active et immersive 100% francophone avec la Sûreté du Québec, Urgence Santé, Service Incendie et bien plus encore.</p>
+            <div class="btn-group">
+                <a href="https://discord.gg/pVfqrbTeC" class="btn" target="_blank"><i class="fab fa-discord"></i> Rejoindre le serveur</a>
+                <a href="#apropos" class="btn btn-secondary">Découvrir plus</a>
+            </div>
+        </div>
+    </section>
+    <div class="marquee"><div class="marquee-track">
+        <div class="marquee-item">RP QUÉBÉCOIS <i class="fas fa-star sep"></i> COMMUNAUTÉ ACTIVE <i class="fas fa-shield-halved sep"></i> SQ & EMS <i class="fas fa-star sep"></i> SESSIONS RÉGULIÈRES <i class="fas fa-shield-halved sep"></i> 100% FRANCOPHONE <i class="fas fa-star sep"></i> STAFF ACTIF <i class="fas fa-shield-halved sep"></i></div>
+        <div class="marquee-item">RP QUÉBÉCOIS <i class="fas fa-star sep"></i> COMMUNAUTÉ ACTIVE <i class="fas fa-shield-halved sep"></i> SQ & EMS <i class="fas fa-star sep"></i> SESSIONS RÉGULIÈRES <i class="fas fa-shield-halved sep"></i> 100% FRANCOPHONE <i class="fas fa-star sep"></i> STAFF ACTIF <i class="fas fa-shield-halved sep"></i></div>
+    </div></div>
+    <section id="apropos">
+        <div class="container">
+            <div class="section-header reveal"><h2>Ce que tu vas trouver</h2><p>Un environnement réaliste, immersif et accueillant au cœur de la Petite-Nation québécoise.</p></div>
+            <div class="features-grid stagger">
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-shield-halved"></i></div><h3>Sûreté du Québec</h3><p>Rejoins les rangs de la SQ et fais respecter la loi dans la municipalité de Papineauville. Formations, patrouilles et interventions réalistes t'attendent.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-truck-medical"></i></div><h3>Urgence Santé</h3><p>Devient ambulancier et sauve des vies. Le service paramédical recrute activement des personnes motivées pour rejoindre l'équipe.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-fire-extinguisher"></i></div><h3>Service Incendie</h3><p>Combat les flammes et porte secours à la population. Un département en développement avec de belles opportunités.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-briefcase"></i></div><h3>Jobs Civils</h3><p>Agriculteur, banquier, chauffeur de taxi, employé de station-service et bien d'autres emplois pour vivre ta vie de citoyen.</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-calendar-check"></i></div><h3>Sessions Régulières</h3><p>Des sessions de jeu organisées régulièrement pour animer le serveur. Vote pour lancer une session et rejoins l'action!</p></div>
+                <div class="feature-card tilt"><div class="spotlight"></div><div class="feature-icon"><i class="fas fa-car"></i></div><h3>Véhicules Personnalisés</h3><p>Liveries québécoises authentiques pour tous les services d'urgence et véhicules civils. Un design soigné pour une immersion totale.</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="reglements" style="background:linear-gradient(180deg,var(--nuit-0),var(--nuit-1))">
+        <div class="container">
+            <div class="section-header reveal"><h2>Règlements du Serveur</h2><p>Pour garantir un environnement RP sérieux, réaliste et respectueux. Le non-respect entraînera des sanctions.</p></div>
+            <div class="rules-grid stagger">
+                <div class="rule-card reveal-left"><span class="rule-num">01</span><h4><i class="fas fa-heart-crack"></i> RDM & Freekill Interdits</h4><p>Ne tue pas d'autres joueurs sans raison valable dans le cadre du roleplay. Chaque action doit avoir une justification RP logique.</p></div>
+                <div class="rule-card reveal-right"><span class="rule-num">02</span><h4><i class="fas fa-car-crash"></i> VDM Prohibé</h4><p>Utiliser un véhicule pour blesser ou tuer quelqu'un sans raison RP est strictement interdit. De même pour tirer sur un véhicule.</p></div>
+                <div class="rule-card reveal-left"><span class="rule-num">03</span><h4><i class="fas fa-handcuffs"></i> Pas de Cuff Rush</h4><p>Tu ne peux pas menotter quelqu'un sans avoir fait un vrai RP avant. Tu dois taper -cuff- avant de menotter.</p></div>
+                <div class="rule-card reveal-right"><span class="rule-num">04</span><h4><i class="fas fa-mask"></i> No Fail RP</h4><p>Tu dois toujours rester dans ton personnage et faire du roleplay en tout temps. Aucune action irréaliste ou impossible n'est permise.</p></div>
+                <div class="rule-card reveal-left"><span class="rule-num">05</span><h4><i class="fas fa-shield-halved"></i> Safe Zone</h4><p>Aucune action criminelle ou violente n'est autorisée dans les zones sécurisées comme le spawn, le tribunal, l'hôpital, le commissariat, la caserne (et leurs parkings).</p></div>
+                <div class="rule-card reveal-right"><span class="rule-num">06</span><h4><i class="fas fa-car"></i> Conduite Réaliste</h4><p>La conduite irréaliste ou dangereuse qui casse l'immersion (ex. conduire à contre sens, descendre des montagnes) est interdite.</p></div>
+                <div class="rule-card reveal-left"><span class="rule-num">07</span><h4><i class="fas fa-clock"></i> PainRP Obligatoire</h4><p>Vous devez jouer la douleur. Lors d'un accident vous devez attendre 5 secondes avant de repartir.</p></div>
+                <div class="rule-card reveal-right"><span class="rule-num">08</span><h4><i class="fas fa-bullhorn"></i> Sommations</h4><p>Les sommations sont obligatoires, dire : (une fois, deux fois, trois fois) avant toute action coercitive.</p></div>
+                <div class="rule-card reveal-left"><span class="rule-num">09</span><h4><i class="fas fa-film"></i> Scènes Prioritaires</h4><p>Pour faire des scènes SP: braquage, prise d'otage, enlèvement, etc. demander à un modérateur OBLIGATOIREMENT.</p></div>
+                <div class="rule-card reveal-right"><span class="rule-num">10</span><h4><i class="fas fa-ban"></i> Cop Baiting</h4><p>Provoquer la police sans raisons RP est interdit. Chaque interaction doit être justifiée et réaliste.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="team-section" id="equipe">
+        <div class="container">
+            <div class="section-header reveal"><h2>Notre Équipe</h2><p>Une équipe passionnée et dévouée pour vous offrir la meilleure expérience de roleplay québécois.</p></div>
+            <div class="team-grid stagger">
+                <div class="team-card tilt">
+                    <div class="team-img-wrap">
+                        <img src="https://cdn.discordapp.com/avatars/1286056179050483866/d80d69942f5781b79d0a0f92b5ad894a.webp?size=1024" alt="Lucas Carré" class="team-img">
+                    </div>
+                    <h3>Lucas Carré</h3>
+                    <span class="team-role">Fondateur & Propriétaire</span>
+                    <p>Créateur et administrateur de la Municipalité de Papineauville RP. Passionné par le roleplay québécois et le développement de communautés immersives sur Emergency Response: Liberty County.</p>
+                    <p style="margin-top:15px;font-size:.95rem"><i class="fab fa-discord"></i> @lulucarre2</p>
+                </div>
+                <div class="team-card tilt">
+                    <div class="team-img-wrap">
+                        <img src="https://cdn.discordapp.com/avatars/1281784488854159421/608fbe0e316e417b5e83539ef8555255.webp?size=1024" alt="Jacobin Babouain" class="team-img">
+                    </div>
+                    <h3>Jacobin Babouain</h3>
+                    <span class="team-role">Concepteur & Développeur</span>
+                    <p>Responsable du design et du développement du serveur. Crée des liveries, uniformes et contenus personnalisés pour offrir une expérience visuelle authentique et québécoise.</p>
+                    <p style="margin-top:15px;font-size:.95rem"><i class="fab fa-discord"></i> @jacobin904</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="container">
+            <div class="section-header reveal"><h2>Questions Fréquentes</h2><p>Un guide simple et clair pour aider les membres à mieux comprendre le fonctionnement du serveur.</p></div>
+            <div class="faq-container stagger">
+                <div class="faq-item">
+                    <div class="faq-question">Comment Rejoindre le Serveur de Jeu? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Sur Roblox, recherche "Emergency Response: Liberty County" et utilise le code "PAPINEAU" ou "LavalQcFr" dans les paramètres du serveur pour nous rejoindre.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Comment Devenir Staff? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Les candidatures staff ouvrent régulièrement. Surveille le salon #📣・annonces sur Discord et ouvre un ticket quand les candidatures sont ouvertes. Nous recherchons des personnes actives, matures et passionnées.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Comment Participer aux Sessions? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Vote pour les sessions via le bot Melonly sur Discord. Quand le nombre de votes requis est atteint, une session démarre automatiquement. Tu recevras un ping si tu as le rôle @Info-Session.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quels Départements Sont Disponibles? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Nous avons la Sûreté du Québec (SQ), Urgence Santé (EMS), Service Incendie, Gouvernement, et divers jobs civils. Certains départements sont sur liste blanche et nécessitent une candidature.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Comment Obtenir une Livery Personnalisée? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Rejoins notre serveur secondaire "Livery Municipalité de Papineauville RP" (https://discord.gg/K6RJwXDA2h) où tu peux consulter et obtenir des liveries personnalisées pour les véhicules du serveur.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Le Serveur est-il Actif? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Oui! Nous organisons des sessions régulières et le serveur est en développement constant. Nous sommes actuellement en phase de construction, donc l'activité varie mais ne cesse de croître. Rejoins-nous pour faire partie de l'aventure dès le début!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta" id="rejoindre">
+        <div class="container"><div class="reveal-scale">
+            <h2>Rejoins l'Aventure Papineauville!</h2>
+            <p>Notre ville, votre histoire. Devient policier, ambulancier, pompier ou simple citoyen. L'expérience RP québécoise t'attend sur Emergency Response: Liberty County.</p>
+            <a href="https://discord.gg/pVfqrbTeC" class="btn btn-pulse" target="_blank" style="background:var(--grad-primary);color:var(--nuit-1);border:none;font-size:1.15rem;padding:20px 50px"><i class="fab fa-discord"></i> Rejoindre Papineauville RP</a>
+        </div></div>
+    </section>
+    <footer><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>À propos</h4>
+                <p>Municipalité de Papineauville RP est un serveur de roleplay Emergency Response: Liberty County basé au Québec. Une communauté 100% francophone offrant une expérience RP réaliste et immersive.</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/pVfqrbTeC" target="_blank" rel="noopener noreferrer" title="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#accueil"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="#apropos"><i class="fas fa-info-circle"></i> À propos</a></li>
+                    <li><a href="#reglements"><i class="fas fa-scroll"></i> Règlements</a></li>
+                    <li><a href="#equipe"><i class="fas fa-users"></i> Équipe</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Serveurs Secondaires</h4>
+                <ul>
+                    <li><a href="https://discord.gg/MYKht8xBp" target="_blank"><i class="fas fa-building"></i> Compagnies Papineauville</a></li>
+                    <li><a href="https://discord.gg/K6RJwXDA2h" target="_blank"><i class="fas fa-car"></i> Livery Papineauville</a></li>
+                    <li><a href="https://discord.gg/pVfqrbTeC" target="_blank"><i class="fab fa-discord"></i> Discord Principal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Conception</h4>
+                <p>Site web conçu et développé avec passion pour la communauté de Papineauville.</p>
+                <div style="display:flex;align-items:center;gap:15px;margin-top:25px">
+                    <img src="https://cdn.discordapp.com/avatars/1281784488854159421/608fbe0e316e417b5e83539ef8555255.webp?size=1024" alt="Jacobin Babouain" style="width:50px;height:50px;border-radius:50%;border:2px solid rgba(30,64,175,.3)">
+                    <div>
+                        <p style="margin:0;font-weight:700;color:var(--blanc)">Jacobin Babouain</p>
+                        <p style="margin:0;font-size:.9rem;color:var(--gris)">Développeur Web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Municipalité de Papineauville RP. Tous droits réservés. | Conçu avec <i class="fas fa-heart" style="color:var(--primary)"></i> par Jacobin Babouain</p>
+        </div>
+    </div></footer>
+    <button class="fab-menu" id="fabMenu" aria-label="Navigation rapide"><i class="fas fa-compass"></i></button>
+    <div class="quicknav-overlay" id="quicknavOverlay"></div>
+    <div class="quicknav" id="quicknav">
+        <div class="quicknav-grab"></div>
+        <div class="quicknav-header">
+            <span>Navigation rapide</span>
+            <button class="quicknav-close" id="quicknavClose" aria-label="Fermer"><i class="fas fa-xmark"></i></button>
+        </div>
+        <nav class="quicknav-links">
+            <a href="#accueil"><i class="fas fa-home"></i> Accueil</a>
+            <a href="#apropos"><i class="fas fa-info-circle"></i> À propos</a>
+            <a href="#reglements"><i class="fas fa-scroll"></i> Règlements</a>
+            <a href="#equipe"><i class="fas fa-users"></i> Équipe</a>
+            <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="#rejoindre" class="qn-cta"><i class="fab fa-discord"></i> Rejoindre</a>
+        </nav>
+    </div>
+    <a href="#accueil" class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></a>
+<script>
+(function(){
+    const percentEl = document.getElementById('preloaderPercent');
+    const barFill = document.getElementById('preloaderBarFill');
+    const preloader = document.getElementById('preloader');
+    let loaded = false, pct = 0;
+    window.addEventListener('load', () => { loaded = true; });
+    const iv = setInterval(() => {
+        if (!loaded && pct >= 90) return;
+        pct += Math.floor(Math.random() * 12) + 5;
+        if (pct > 100) pct = 100;
+        percentEl.textContent = pct + '%';
+        barFill.style.width = pct + '%';
+        if (pct >= 100 && loaded) {
+            clearInterval(iv);
+            setTimeout(() => preloader.classList.add('hidden'), 350);
+        }
+    }, 90);
+    setTimeout(() => { clearInterval(iv); preloader.classList.add('hidden'); }, 5000);
+})();
+const glow=document.getElementById('glowFollow');
+document.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
+const scrollProgress=document.getElementById('scrollProgress'),header=document.getElementById('header'),backToTop=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+    const s=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
+    scrollProgress.style.width=(s/h*100)+'%';
+    header.classList.toggle('scrolled',s>100);
+    backToTop.classList.toggle('visible',s>500);
+},{passive:true});
+const titleEl=document.getElementById('heroTitle');
+const TITLE_TEXT=titleEl.getAttribute('data-text')||'PAPINEAUVILLE RP';
+(function buildTitle(){
+    titleEl.innerHTML='';
+    const words=TITLE_TEXT.split(' ');
+    let charIndex=0;
+    words.forEach((word)=>{
+        const wSpan=document.createElement('span');
+        wSpan.className='word';
+        word.split('').forEach((ch)=>{
+            const cSpan=document.createElement('span');
+            cSpan.className='char';
+            cSpan.textContent=ch;
+            cSpan.style.animationDelay=(0.6+charIndex*0.045)+'s, 0s';
+            wSpan.appendChild(cSpan);
+            charIndex++;
+        });
+        titleEl.appendChild(wSpan);
+    });
+    setTimeout(()=>titleEl.classList.add('done'),600+charIndex*45+800);
+})();
+const subEl=document.getElementById('heroSub');
+const SUB_TEXT='NOTRE VILLE • VOTRE HISTOIRE • RP QUÉBÉCOIS';
+let twI=0;
+function typeWriter(){if(twI<=SUB_TEXT.length){subEl.innerHTML=SUB_TEXT.slice(0,twI)+'<span class="tw-cursor"></span>';twI++;setTimeout(typeWriter,70)}else{subEl.innerHTML=SUB_TEXT}}
+setTimeout(typeWriter,1800);
+const canvas=document.getElementById('particleCanvas'),ctx=canvas.getContext('2d');let particles=[];
+function resizeC(){canvas.width=window.innerWidth;canvas.height=window.innerHeight}resizeC();window.addEventListener('resize',resizeC);
+function initP(){particles=[];const c=Math.min(70,Math.floor(window.innerWidth/22));for(let i=0;i<c;i++)particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.8+.8})}initP();
+let pmx=-1e3,pmy=-1e3;document.addEventListener('mousemove',e=>{pmx=e.clientX;pmy=e.clientY});
+function drawFrame(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+        p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;
+        const adx=pmx-p.x,ady=pmy-p.y,adist=Math.sqrt(adx*adx+ady*ady);
+        if(adist<180&&adist>28){const ang=Math.atan2(ady,adx);const force=0.03*(1-adist/180);p.vx+=Math.cos(ang)*force;p.vy+=Math.sin(ang)*force;const sp=Math.sqrt(p.vx*p.vx+p.vy*p.vy);if(sp>1.1){p.vx=(p.vx/sp)*1.1;p.vy=(p.vy/sp)*1.1;}}
+        ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(214,220,239,.35)';ctx.fill();
+    });
+    for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(30,64,175,${.25*(1-d/120)})`;ctx.lineWidth=1;ctx.stroke()}}
+        const dmx=particles[i].x-pmx,dmy=particles[i].y-pmy,dm=Math.sqrt(dmx*dmx+dmy*dmy);
+        if(dm<150){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(pmx,pmy);ctx.strokeStyle=`rgba(30,64,175,${.3*(1-dm/150)})`;ctx.lineWidth=1;ctx.stroke()}
+    }
+}
+function loop(){drawFrame();requestAnimationFrame(loop);}
+loop();
+const allReveal=document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger');
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active')})},{threshold:.1});
+allReveal.forEach(el=>revObs.observe(el));
+const sects=document.querySelectorAll('section[id]');
+const dotsC=document.getElementById('progressDots');
+sects.forEach((s)=>{const d=document.createElement('div');d.className='dot';d.title=s.id;d.addEventListener('click',()=>{s.scrollIntoView({behavior:'smooth'})});dotsC.appendChild(d)});
+const dots=dotsC.querySelectorAll('.dot');
+const spyObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const idx=[...sects].indexOf(e.target);dots.forEach((d,i)=>d.classList.toggle('active',i===idx));document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))}})},{threshold:.35});
+sects.forEach(s=>spyObs.observe(s));
+document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-question').addEventListener('click',()=>{const a=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(o=>o.classList.remove('active'));if(!a)item.classList.add('active')})});
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open')});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('active');navLinks.classList.remove('open')}));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+const fabMenu=document.getElementById('fabMenu'),quicknav=document.getElementById('quicknav'),quicknavOverlay=document.getElementById('quicknavOverlay'),quicknavClose=document.getElementById('quicknavClose');
+function openQN(){quicknav.classList.add('open');quicknavOverlay.classList.add('open');document.body.style.overflow='hidden'}
+function closeQN(){quicknav.classList.remove('open');quicknavOverlay.classList.remove('open');document.body.style.overflow=''}
+fabMenu.addEventListener('click',openQN);quicknavClose.addEventListener('click',closeQN);quicknavOverlay.addEventListener('click',closeQN);
+quicknav.querySelectorAll('a').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const h=a.getAttribute('href');closeQN();setTimeout(()=>{const t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})},80)})});
+</script>
+</body>
+</html>
