@@ -137,17 +137,17 @@
         .rule-card h4 i{color:var(--gold)}
         .rule-card p{color:var(--taupe);font-size:1.05rem;line-height:1.9;position:relative;z-index:1}
         .team-section{background:linear-gradient(180deg,var(--nuit-1),var(--nuit-0));border-top:2px solid var(--border);border-bottom:2px solid var(--border)}
-        .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:35px;max-width:1200px;margin:0 auto}
-        .team-card{background:rgba(30,40,58,.5);border-radius:28px;padding:40px;text-align:center;border:2px solid var(--border);backdrop-filter:blur(15px);transition:all .5s;position:relative;overflow:hidden}
+        .team-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:30px;max-width:1400px;margin:0 auto}
+        .team-card{background:rgba(30,40,58,.5);border-radius:28px;padding:35px 25px;text-align:center;border:2px solid var(--border);backdrop-filter:blur(15px);transition:all .5s;position:relative;overflow:hidden;height:100%;display:flex;flex-direction:column}
         .team-card:hover{transform:translateY(-10px);box-shadow:0 30px 80px rgba(201,169,97,.3)}
-        .team-img-wrap{width:150px;height:150px;margin:0 auto 25px;position:relative}
+        .team-img-wrap{width:120px;height:120px;margin:0 auto 20px;position:relative}
         .team-img-wrap::after{content:'';position:absolute;inset:-8px;border:2px dashed var(--gold);border-radius:50%;animation:rotate 15s linear infinite}
         @keyframes rotate{to{transform:rotate(360deg)}}
-        .team-img{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);transition:all .5s}
+        .team-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);transition:all .5s}
         .team-card:hover .team-img{transform:scale(1.08);border-color:var(--gold-light)}
-        .team-card h3{font-size:1.8rem;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;font-weight:800}
-        .team-role{display:inline-block;padding:6px 20px;border-radius:20px;font-size:.9rem;font-weight:700;margin-bottom:20px;background:var(--grad-gold);color:var(--nuit-1)}
-        .team-card p{color:var(--taupe);line-height:1.8}
+        .team-card h3{font-size:1.5rem;background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;font-weight:800}
+        .team-role{display:inline-block;padding:5px 15px;border-radius:20px;font-size:.85rem;font-weight:700;margin-bottom:15px;background:var(--grad-gold);color:var(--nuit-1)}
+        .team-card p{color:var(--taupe);line-height:1.7;font-size:.95rem;flex-grow:1}
         .faq-container{max-width:850px;margin:0 auto}
         .faq-item{background:rgba(30,40,58,.5);border-radius:20px;margin-bottom:25px;border:2px solid var(--border);overflow:hidden;transition:all .5s;backdrop-filter:blur(10px)}
         .faq-item:hover{border-color:var(--gold);box-shadow:0 15px 50px rgba(30,58,95,.4)}
@@ -182,6 +182,7 @@
         .fab-menu,.quicknav,.quicknav-overlay{display:none}
         @keyframes fabPulse{0%,100%{box-shadow:0 10px 30px rgba(201,169,97,.4)}50%{box-shadow:0 10px 42px rgba(201,169,97,.7)}}
         @media(max-width:900px){
+            .team-grid{grid-template-columns:repeat(2, 1fr)}
             .fab-menu{display:flex;align-items:center;justify-content:center;position:fixed;left:22px;bottom:22px;width:58px;height:58px;border-radius:50%;border:2px solid var(--gold);background:var(--grad-gold);color:var(--nuit-1);font-size:1.4rem;z-index:1002;animation:fabPulse 2.5s ease-in-out infinite;cursor:pointer}
             .quicknav-overlay{display:block;position:fixed;inset:0;background:rgba(10,14,26,.7);backdrop-filter:blur(4px);z-index:1003;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
             .quicknav-overlay.open{opacity:1;visibility:visible}
@@ -196,6 +197,9 @@
             .quicknav-links a i{color:var(--gold);width:20px;text-align:center}
             .quicknav-links .qn-cta{grid-column:1/-1;background:var(--grad-gold);color:var(--nuit-1);justify-content:center;border:2px solid var(--gold)}
             .quicknav-links .qn-cta i{color:var(--nuit-1)}
+        }
+        @media(max-width:600px){
+            .team-grid{grid-template-columns:1fr}
         }
         .reveal{opacity:0;transform:translateY(50px);transition:all .8s cubic-bezier(.4,0,.2,1)}
         .reveal.active{opacity:1;transform:translateY(0)}
@@ -292,13 +296,12 @@
                 <div class="rule-card reveal-left"><span class="rule-num">07</span><h4><i class="fas fa-clock"></i> PainRP Obligatoire</h4><p>Vous devez jouer la douleur. Lors d'un accident vous devez attendre 5 secondes avant de repartir.</p></div>
                 <div class="rule-card reveal-right"><span class="rule-num">08</span><h4><i class="fas fa-bullhorn"></i> Sommations</h4><p>Les sommations sont obligatoires, dire : (une fois, deux fois, trois fois) avant toute action coercitive.</p></div>
                 <div class="rule-card reveal-left"><span class="rule-num">09</span><h4><i class="fas fa-film"></i> Scènes Prioritaires</h4><p>Pour faire des scènes SP: braquage, prise d'otage, enlèvement, etc. demander à un modérateur OBLIGATOIREMENT.</p></div>
-                <div class="rule-card reveal-right"><span class="rule-num">10</span><h4><i class="fas fa-ban"></i> Cop Baiting</h4><p>Provoquer la police sans raisons RP est interdit. Chaque interaction doit être justifiée et réaliste.</p></div>
             </div>
         </div>
     </section>
     <section class="team-section" id="equipe">
         <div class="container">
-            <div class="section-header reveal"><h2>Notre Équipe</h2><p>Une équipe passionnée et dévouée pour vous offrir la meilleure expérience de roleplay québécois.</p></div>
+            <div class="section-header reveal"><h2>La Fondation</h2><p>Une équipe passionnée et dévouée pour vous offrir la meilleure expérience de roleplay québécois.</p></div>
             <div class="team-grid stagger">
                 <div class="team-card tilt">
                     <div class="team-img-wrap">
@@ -306,8 +309,8 @@
                     </div>
                     <h3>Lucas Carré</h3>
                     <span class="team-role">Fondateur & Propriétaire</span>
-                    <p>Créateur et administrateur de la Municipalité de Papineauville RP. Passionné par le roleplay québécois et le développement de communautés immersives sur Emergency Response: Liberty County.</p>
-                    <p style="margin-top:15px;font-size:.95rem"><i class="fab fa-discord"></i> @lulucarre2</p>
+                    <p>Créateur et administrateur de la Municipalité de Papineauville RP. Passionné par le roleplay québécois et le développement de communautés immersives.</p>
+                    <p style="margin-top:15px;font-size:.9rem"><i class="fab fa-discord"></i> @lulucarre2</p>
                 </div>
                 <div class="team-card tilt">
                     <div class="team-img-wrap">
@@ -316,7 +319,7 @@
                     <h3>Cyber_Wolf</h3>
                     <span class="team-role">Co-Fondateur</span>
                     <p>Membre clé de l'équipe de direction. Contribue activement au développement et à l'animation de la communauté Papineauville RP.</p>
-                    <p style="margin-top:15px;font-size:.95rem"><i class="fab fa-discord"></i> @cyber_wolf_5434</p>
+                    <p style="margin-top:15px;font-size:.9rem"><i class="fab fa-discord"></i> @cyber_wolf_5434</p>
                 </div>
                 <div class="team-card tilt">
                     <div class="team-img-wrap">
@@ -325,7 +328,7 @@
                     <h3>Jay</h3>
                     <span class="team-role">Co-Fondateur</span>
                     <p>Impliqué dans la gestion et l'organisation du serveur. Travaille à offrir la meilleure expérience RP possible aux membres.</p>
-                    <p style="margin-top:15px;font-size:.95rem"><i class="fab fa-discord"></i> @jay002094</p>
+                    <p style="margin-top:15px;font-size:.9rem"><i class="fab fa-discord"></i> @jay002094</p>
                 </div>
                 <div class="team-card tilt">
                     <div class="team-img-wrap">
@@ -334,7 +337,7 @@
                     <h3>felixp7144</h3>
                     <span class="team-role">Co-Fondateur</span>
                     <p>Participe activement à la modération et au développement de la municipalité. Engagé pour maintenir une communauté soudée et active.</p>
-                    <p style="margin-top:15px;font-size:.95rem"><i class="fab fa-discord"></i> @felixp7144</p>
+                    <p style="margin-top:15px;font-size:.9rem"><i class="fab fa-discord"></i> @felixp7144</p>
                 </div>
             </div>
         </div>
@@ -405,16 +408,19 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Liens Utiles</h4>
-                <ul>
-                    <li><a href="https://www.roblox.com/games/4999564556/Emergency-Response-Liberty-County" target="_blank"><i class="fas fa-gamepad"></i> ER:LC sur Roblox</a></li>
-                    <li><a href="#reglements"><i class="fas fa-book"></i> Règlements Complets</a></li>
-                    <li><a href="#faq"><i class="fas fa-circle-question"></i> FAQ</a></li>
-                </ul>
+                <h4>Conception</h4>
+                <p>Site web conçu et développé avec passion pour la communauté de Papineauville.</p>
+                <div style="display:flex;align-items:center;gap:15px;margin-top:25px">
+                    <img src="https://cdn.discordapp.com/avatars/1281784488854159421/608fbe0e316e417b5e83539ef8555255.webp?size=1024" alt="Jacobin Babouain" style="width:50px;height:50px;border-radius:50%;border:2px solid var(--gold)">
+                    <div>
+                        <p style="margin:0;font-weight:700;color:var(--cream)">Jacobin Babouain</p>
+                        <p style="margin:0;font-size:.9rem;color:var(--taupe)">Développeur Web</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 Municipalité de Papineauville RP. Tous droits réservés. | Notre Ville, Votre Histoire</p>
+            <p>&copy; 2026 Municipalité de Papineauville RP. Tous droits réservés. | Conçu avec <i class="fas fa-heart" style="color:var(--gold)"></i> par Jacobin Babouain</p>
         </div>
     </div></footer>
     <button class="fab-menu" id="fabMenu" aria-label="Navigation rapide"><i class="fas fa-compass"></i></button>
